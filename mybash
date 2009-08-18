@@ -1,5 +1,4 @@
 export EDITOR=vi
-export ECLIPSE_HOME=$HOME/eclipse
 
 alias update='sudo apt-get update && sudo apt-get upgrade'
 
