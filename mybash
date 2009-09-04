@@ -1,7 +1,7 @@
 export EDITOR=vi
 export HISTIGNORE=" *"
 
-alias update='sudo apt-get update && sudo apt-get upgrade'
+alias update='sudo sh -c "apt-get update ; apt-get upgrade ; gem1.8 update"'
 
 GREEN='\e[0;32m'
 BLUE='\e[0;34m'
