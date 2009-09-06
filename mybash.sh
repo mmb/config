@@ -9,7 +9,13 @@ PURPLE='\e[0;35m'
 BRIGHT_PURPLE='\e[1;35m'
 RESET='\e[0m'
 
-export PS1="${debian_chroot:+($debian_chroot)}\u@\h \$(jobs | wc -l | sed -n 's/^\([1-9][:digit:]*\)/\[${BRIGHT_PURPLE}\]\1\[${PURPLE}\]bg\[${RESET}\] /p')\[${BLUE}\]\w\[${RESET}\]\$(git branch 2>/dev/null | sed -n 's/^\* \(.*\)/ git:\[${GREEN}\]\1\[${RESET}\]/p')\$ "
+PS1="${debian_chroot:+($debian_chroot)}\u@\h "
+# show number of background jobs if any
+PS1="${PS1}\$(jobs | wc -l | sed -n 's/^\([1-9][:digit:]*\)/\[${BRIGHT_PURPLE}\]\1\[${PURPLE}\]bg\[${RESET}\] /p')"
+PS1="${PS1}\[${BLUE}\]\w\[${RESET}\]"
+# current git branch
+PS1="${PS1}\$(git branch 2>/dev/null | sed -n 's/^\* \(.*\)/ git:\[${GREEN}\]\1\[${RESET}\]/p')"
+PS1="${PS1}\$ "
 
 . ~/mybash_private.sh
 
