@@ -37,3 +37,5 @@ function set_pagers {
 }
 
 set_pagers
+
+alias mozrepl='rlwrap telnet localhost 4242'
