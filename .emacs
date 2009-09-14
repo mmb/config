@@ -12,3 +12,11 @@
 
 ;; org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+
+(defun xml-pretty ()
+  "make current buffer pretty if in sgml mode"
+  (interactive)
+  (when (eq major-mode 'sgml-mode)
+    (sgml-pretty-print (point-min) (point-max))))
+
+(global-set-key "\C-c\C-p" 'xml-pretty)
