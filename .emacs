@@ -20,3 +20,5 @@
     (sgml-pretty-print (point-min) (point-max))))
 
 (global-set-key "\C-c\C-p" 'xml-pretty)
+
+(global-set-key "\C-c\C-s" 'sort-lines)
