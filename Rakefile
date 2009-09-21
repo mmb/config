@@ -22,6 +22,7 @@ desc 'Symlink config files at the right locations.'
 task :create_symlinks do
   {
     '.emacs' => '~/.emacs',
+    '.irbrc' => '~/.irbrc',
     '.screenrc' => '~/.screenrc',
     '.xmonad' => '~/.xmonad',
     'mybash.sh' => '~/mybash.sh',
