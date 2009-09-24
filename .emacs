@@ -8,6 +8,7 @@
 
 (add-to-list 'load-path "/home/mmb/src/el/")
 (load "color-theme-tango.el")
+(load "textile-mode.el")
 (color-theme-tango)
 
 ;; org mode
@@ -22,3 +23,7 @@
 (global-set-key "\C-c\C-p" 'xml-pretty)
 
 (global-set-key "\C-c\C-s" 'sort-lines)
+
+;; textile mode
+(require 'textile-mode)
+(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
