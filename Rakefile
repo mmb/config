@@ -24,6 +24,7 @@ task :create_symlinks do
     '.emacs' => '~/.emacs',
     '.irbrc' => '~/.irbrc',
     '.screenrc' => '~/.screenrc',
+    '.xinitrc' => '~/.xinitrc',
     '.xmonad' => '~/.xmonad',
     'mybash.sh' => '~/mybash.sh',
     'vim_pager.sh' => '~/bin/vim_pager.sh',
