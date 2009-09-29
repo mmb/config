@@ -39,3 +39,4 @@ function set_pagers {
 set_pagers
 
 alias mozrepl='rlwrap telnet localhost 4242'
+alias wow='~/.wine/drive_c/Program\ Files/World\ of\ Warcraft/Launcher.exe'
