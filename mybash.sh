@@ -40,3 +40,10 @@ set_pagers
 
 alias mozrepl='rlwrap telnet localhost 4242'
 alias wow='~/.wine/drive_c/Program\ Files/World\ of\ Warcraft/Launcher.exe'
+
+# open rdoc for a ruby core class in Firefox, multiword names are converted to
+# camel case: (e.g. brdoc argument error)
+function brdoc {
+  CLASS=`echo "$*" | sed 's/\(^\| \+\)\([a-z]\)/\u\2/g'`
+  `firefox http://ruby-doc.org/core/classes/${CLASS}.html`
+}
