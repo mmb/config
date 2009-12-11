@@ -20,14 +20,15 @@ end
 
 desc 'Symlink config files at the right locations.'
 task :create_symlinks do
-  {
-    '.emacs' => '~/.emacs',
-    '.irbrc' => '~/.irbrc',
-    '.screenrc' => '~/.screenrc',
-    '.xmonad' => '~/.xmonad',
-    'mybash.sh' => '~/mybash.sh',
-    'bin/vim_pager.sh' => '~/bin/vim_pager.sh',
-  }.each do |source,dest|
+  Hash[*%w{
+    .emacs           ~/.emacs
+    .irbrc           ~/.irbrc
+    .screenrc        ~/.screenrc
+    .xmonad          ~/.xmonad
+    mybash.sh        ~/mybash.sh
+    bin/vim_pager.sh ~/bin/vim_pager.sh
+    bin/areac        ~/bin/areac
+  }].each do |source,dest|
     check_symlink(File.join(Dir.pwd, source), File.expand_path(dest))
   end
 end

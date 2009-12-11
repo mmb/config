@@ -1,0 +1,24 @@
+#!/usr/bin/ruby
+
+# get location of an area code
+
+require 'open-uri'
+
+require 'rubygems'
+require 'hpricot'
+
+def fail(message); puts message; exit(1); end
+
+unless ARGV.empty?
+  open('http://www.bennetyee.org/ucsd-pages/area.html') do |f|
+    doc = Hpricot(f)
+    if (node = doc.at("a[@name='#{ARGV.first}']/../../td[4]"))
+      puts node.to_plain_text
+    else
+      fail('not found')
+    end
+  end
+else
+  fail('usage: areac.rb area_code')
+end
+
