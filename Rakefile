@@ -26,7 +26,7 @@ task :create_symlinks do
     '.screenrc' => '~/.screenrc',
     '.xmonad' => '~/.xmonad',
     'mybash.sh' => '~/mybash.sh',
-    'vim_pager.sh' => '~/bin/vim_pager.sh',
+    'bin/vim_pager.sh' => '~/bin/vim_pager.sh',
   }.each do |source,dest|
     check_symlink(File.join(Dir.pwd, source), File.expand_path(dest))
   end
