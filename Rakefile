@@ -22,6 +22,7 @@ desc 'Symlink config files at the right locations.'
 task :create_symlinks do
   Hash[*%w{
     .emacs           ~/.emacs
+    .gitconfig       ~/.gitconfig
     .irbrc           ~/.irbrc
     .screenrc        ~/.screenrc
     .xmonad          ~/.xmonad
