@@ -3,3 +3,5 @@
   (interactive)
   (when (eq major-mode 'sgml-mode)
     (sgml-pretty-print (point-min) (point-max))))
+
+(provide 'xml-pretty)
