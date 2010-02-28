@@ -10,14 +10,16 @@
 (require 'color-theme-tango)
 (color-theme-tango)
 
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+
+(global-set-key "\C-c\C-s" 'sort-lines)
+
 (require 'textile-mode)
 (add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
-
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 (require 'xml-pretty)
 (global-set-key "\C-c\C-p" 'xml-pretty)
 
-(global-set-key "\C-c\C-s" 'sort-lines)
+(load "python-mode-add.el")
 
 (server-start)
