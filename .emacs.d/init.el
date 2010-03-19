@@ -5,6 +5,7 @@
 (menu-bar-mode -1)
 
 (global-font-lock-mode 1)
+(set-default-font "-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*")
 
 (require 'color-theme)
 (require 'color-theme-tango)
