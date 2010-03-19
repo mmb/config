@@ -29,6 +29,7 @@ task :create_symlinks do
     mybash.sh        ~/mybash.sh
     bin/vim_pager.sh ~/bin/vim_pager.sh
     bin/areac        ~/bin/areac
+    .Xdefaults       ~/.Xdefaults
   }].each do |source,dest|
     check_symlink(File.join(Dir.pwd, source), File.expand_path(dest))
   end
