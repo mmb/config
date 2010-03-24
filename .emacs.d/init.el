@@ -7,6 +7,8 @@
 (global-font-lock-mode 1)
 (set-default-font "-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*")
 
+(setq column-number-mode t)
+
 (require 'color-theme)
 (require 'color-theme-tango)
 (color-theme-tango)
