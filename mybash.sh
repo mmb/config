@@ -13,6 +13,10 @@ function brdoc {
   firefox http://ruby-doc.org/core/classes/${CLASS}.html
 }
 
+function git_count_unpushed {
+  git status 2> /dev/null | sed -n "s/# Your branch is ahead of '.\+' by \([0-9]\+\) commits\?\./\(\\1 unpushed\)/p"
+}
+
 function set_pagers {
   `which more > /dev/null` &&
     PAGER=more
@@ -46,7 +50,7 @@ PS1="${debian_chroot:+($debian_chroot)}\u@\h "
 PS1="${PS1}\$(jobs | wc -l | sed -n 's/^\([1-9][:digit:]*\)/\[${BRIGHT_PURPLE}\]\1\[${PURPLE}\]bg\[${RESET}\] /p')"
 PS1="${PS1}\[${BLUE}\]\w\[${RESET}\]"
 # current git branch
-PS1="${PS1}\$(git branch 2>/dev/null | sed -n 's/^\* \(.*\)/ git:\[${GREEN}\]\1\[${RESET}\]/p')"
+PS1="${PS1}\$(git branch 2>/dev/null | sed -n 's/^\* \(.*\)/ git:\[${GREEN}\]\1\[${RESET}\]/p')\$(git_count_unpushed)"
 PS1="${PS1}\$ "
 
 set_pagers
