@@ -24,5 +24,6 @@
 (global-set-key "\C-c\C-p" 'xml-pretty)
 
 (load "python-mode-add.el")
+(load "ruby")
 
 (server-start)
