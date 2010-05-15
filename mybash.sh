@@ -37,7 +37,7 @@ function set_pagers {
 
 # open a tunnel to a remote host for an x11vnc
 function x11vnctun {
-  ssh -t -L 5900:localhost:5900 $1 "x11vnc -usepw -localhost"
+  ssh -t -L 5900:localhost:5900 $1 "x11vnc -usepw -localhost -xkb"
 }
 
 BLUE='\e[0;34m'
