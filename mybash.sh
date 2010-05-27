@@ -1,6 +1,6 @@
 export EDITOR=vi
 export HISTIGNORE=" *"
-export RUBYOPT=rubygems
+export RUBYOPT="r rubygems w"
 
 alias httphead='wget -O /dev/null -q -S'
 alias update='sudo sh -c "apt-get update ; apt-get upgrade ; gem1.8 update"'
