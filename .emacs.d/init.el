@@ -20,6 +20,8 @@
 (require 'textile-mode)
 (add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
 
+(require 'tramp)
+
 (require 'xml-pretty)
 (global-set-key "\C-c\C-p" 'xml-pretty)
 
