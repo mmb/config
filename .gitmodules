@@ -1,0 +1,3 @@
+[submodule ".emacs.d/vendor/google-maps"]
+	path = .emacs.d/vendor/google-maps
+	url = git://git.naquadah.org/~jd/jd-el.git

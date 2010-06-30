@@ -1,4 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d")
+(load "helper.el")
+(add-to-load-path-and-next-level "~/.emacs.d/vendor")
 
 ; turn off tool bar and menu bar
 (tool-bar-mode -1)
@@ -27,5 +29,7 @@
 
 (load "python-mode-add.el")
 (load "ruby")
+
+(load "google-maps/google-maps")
 
 (server-start)
