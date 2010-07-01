@@ -11,10 +11,6 @@
 
 (setq column-number-mode t)
 
-(require 'color-theme)
-(require 'color-theme-tango)
-(color-theme-tango)
-
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 (global-set-key "\C-c\C-s" 'sort-lines)
@@ -29,6 +25,7 @@
 
 (load "python-mode-add.el")
 (load "ruby")
+(load "theme")
 
 (load "google-maps/google-maps")
 
