@@ -35,6 +35,11 @@ function set_pagers {
   alias more=\$PAGER
 }
 
+# open a sock5 proxy listening locally and sending requests through a tunnel
+function sockstun {
+  ssh -C -f -D localhost:1080 -N $1
+}
+
 # open a tunnel to a remote host for an x11vnc
 function x11vnctun {
   ssh -t -L 5900:localhost:5900 $1 "x11vnc -usepw -localhost -xkb"
