@@ -8,5 +8,5 @@ backtick 2 300 300 /home/mmb/bin/gmail_unread.rb
 backtick 3 3600 3600 /home/mmb/bin/weather.rb
 backtick 4 3600 3600 /home/mmb/bin/public_ip.rb
 
-caption always "%{= gk}%0c %H %4` %1`%="
+caption always "%{= gk}%0c %m/%d %H %4` %1`%="
 hardstatus alwayslastline "%{= d}%2`%3`%="
