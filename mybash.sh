@@ -40,6 +40,13 @@ function sockstun {
   ssh -C -f -D localhost:1080 -N $1
 }
 
+# extract audio from a video file and save in mp3
+function vid2mp3 {
+  VIDEO=$1
+  MP3=${VIDEO%.*}.mp3
+  ffmpeg -i ${VIDEO} -vn -ar 44100 -ac 2 -ab 192 -f mp3 ${MP3}
+}
+
 # open a tunnel to a remote host for an x11vnc
 function x11vnctun {
   ssh -t -L 5900:localhost:5900 $1 "x11vnc -usepw -localhost -xkb"
