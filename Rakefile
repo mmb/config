@@ -30,6 +30,8 @@ task :create_symlinks do
     mybash.sh        ~/mybash.sh
     bin/vim_pager.sh ~/bin/vim_pager.sh
     bin/areac        ~/bin/areac
+    bin/clip2browser ~/bin/clip2browser
+    bin/clip2google  ~/bin/clip2google
     .Xdefaults       ~/.Xdefaults
   }].each do |source,dest|
     check_symlink(File.join(Dir.pwd, source), File.expand_path(dest))

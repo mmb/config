@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# open google search for selected text in browser
+
+# adapted from http://chneukirchen.org/blog/archive/2010/10/two-insanely-useful-command-line-tools.html
+
+SELECTED=`xclip -out`
+ENCODED=`python -c "import urllib; print urllib.quote('''${SELECTED}''')"`
+
+firefox "http://google.com/search?q=${ENCODED}"
