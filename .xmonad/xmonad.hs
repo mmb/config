@@ -8,5 +8,6 @@ main = do
     terminal = "urxvt"
   } `additionalKeysP` [
       ("M-u", safeSpawnProg "clip2browser"),
-      ("M-g", safeSpawnProg "clip2google")
+      ("M-g", safeSpawnProg "clip2google"),
+      ("M-x", safeSpawnProg "xlock")
     ]
