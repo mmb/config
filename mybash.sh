@@ -35,6 +35,14 @@ function set_pagers {
   alias more=\$PAGER
 }
 
+# open a local port that tunnels to a remote rdp server, then rdesktop to
+# the remote rdp server via the tunnel
+# example: rdptun 3390 jump_server rdp_server 1680x1050 rdp_user
+function rdptun {
+  ssh -C -f -L localhost:$1:$3:3389 -N $2
+  rdesktop -g $4 -u $5 localhost:$1
+}
+
 # open a sock5 proxy listening locally and sending requests through a tunnel
 function sockstun {
   ssh -C -f -D localhost:1080 -N $1
