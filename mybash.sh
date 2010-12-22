@@ -14,6 +14,11 @@ function brdoc {
   firefox http://ruby-doc.org/core/classes/${CLASS}.html
 }
 
+# convert a unix time to a readable time
+function epoch {
+  date -d @$1
+}
+
 function git_count_unpushed {
   git status 2> /dev/null | sed -n "s/# Your branch is ahead of '.\+' by \([0-9]\+\) commits\?\./\(\\1 unpushed\)/p"
 }
