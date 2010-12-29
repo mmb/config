@@ -21,18 +21,18 @@ end
 desc 'Symlink config files at the right locations.'
 task :create_symlinks do
   Hash[*%w{
+    .Xdefaults       ~/.Xdefaults
     .emacs.d         ~/.emacs.d
     .gemrc           ~/.gemrc
     .gitconfig       ~/.gitconfig
     .irbrc           ~/.irbrc
     .screenrc        ~/.screenrc
     .xmonad          ~/.xmonad
-    mybash.sh        ~/mybash.sh
-    bin/vim_pager.sh ~/bin/vim_pager.sh
     bin/areac        ~/bin/areac
     bin/clip2browser ~/bin/clip2browser
     bin/clip2google  ~/bin/clip2google
-    .Xdefaults       ~/.Xdefaults
+    bin/vim_pager.sh ~/bin/vim_pager.sh
+    mybash.sh        ~/mybash.sh
   }].each do |source,dest|
     check_symlink(File.join(Dir.pwd, source), File.expand_path(dest))
   end
