@@ -26,6 +26,7 @@ task :create_symlinks do
     .gemrc           ~/.gemrc
     .gitconfig       ~/.gitconfig
     .irbrc           ~/.irbrc
+    .pythonrc.py     ~/.pythonrc.py
     .screenrc        ~/.screenrc
     .xmonad          ~/.xmonad
     bin/areac        ~/bin/areac
