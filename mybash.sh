@@ -70,6 +70,7 @@ BLUE='\e[0;34m'
 GREEN='\e[0;32m'
 PURPLE='\e[0;35m'
 BRIGHT_PURPLE='\e[1;35m'
+RED='\e[0;31m'
 RESET='\e[0m'
 
 PS1="${debian_chroot:+($debian_chroot)}\u@\h "
@@ -78,7 +79,8 @@ PS1="${PS1}\$(jobs | wc -l | sed -n 's/^\([1-9][:digit:]*\)/\[${BRIGHT_PURPLE}\]
 PS1="${PS1}\[${BLUE}\]\w\[${RESET}\]"
 # current git branch
 PS1="${PS1}\$(git branch 2>/dev/null | sed -n 's/^\* \(.*\)/ git:\[${GREEN}\]\1\[${RESET}\]/p')\$(git_count_unpushed)"
-PS1="${PS1}\$ "
+PS1="${PS1}\$([ -s ~/.rvm/bin/rvm-prompt ] && echo -n ' \[${RED}\]' && ~/.rvm/bin/rvm-prompt)"
+PS1="${PS1}\[${RESET}\]\$ "
 
 set_pagers
 
