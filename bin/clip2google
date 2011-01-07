@@ -7,4 +7,5 @@
 SELECTED=`xclip -out`
 ENCODED=`python -c "import urllib; print urllib.quote('''${SELECTED}''')"`
 
-firefox "http://google.com/search?q=${ENCODED}"
+# firefox "http://google.com/search?q=${ENCODED}"
+firefox "https://encrypted.google.com/search?q=${ENCODED}"
