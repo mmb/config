@@ -29,8 +29,7 @@ function rvm_prompt_part {
   if [ -s ${RVM_PROMPT} ]; then
     VERSION=`${RVM_PROMPT}`
     if [ -n "${VERSION}" ]; then
-      RED='\e[0;31m'
-      echo -e -n " ${RED}${VERSION}"
+      echo -n " ${VERSION}"
     fi
   fi
 }
@@ -81,6 +80,7 @@ BLUE='\e[0;34m'
 GREEN='\e[0;32m'
 PURPLE='\e[0;35m'
 BRIGHT_PURPLE='\e[1;35m'
+RED='\e[0;31m'
 RESET='\e[0m'
 
 PS1="${debian_chroot:+($debian_chroot)}\u@\h "
@@ -90,7 +90,7 @@ PS1="${PS1}\[${BLUE}\]\w\[${RESET}\]"
 # current git branch
 PS1="${PS1}\$(git branch 2>/dev/null | sed -n 's/^\* \(.*\)/ git:\[${GREEN}\]\1\[${RESET}\]/p')\$(git_count_unpushed)"
 # current rvm ruby version
-PS1="${PS1}\$(rvm_prompt_part)"
+PS1="${PS1}\[${RED}\]\$(rvm_prompt_part)"
 PS1="${PS1}\[${RESET}\] \$ "
 
 set_pagers
