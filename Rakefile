@@ -1,3 +1,5 @@
+require 'fileutils'
+
 task :default => [:create_symlinks]
 
 def check_symlink(source, dest)
@@ -20,6 +22,8 @@ end
 
 desc 'Symlink config files at the right locations.'
 task :create_symlinks do
+  FileUtils.mkdir_p(File.expand_path('~/bin'))
+
   Hash[*%w{
     .Xdefaults       ~/.Xdefaults
     .emacs.d         ~/.emacs.d
