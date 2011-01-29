@@ -95,4 +95,4 @@ PS1="${PS1}\[${RESET}\] \$ "
 
 set_pagers
 
-. ~/mybash_private.sh
+[[ -f ~/mybash_private.sh ]] && . ~/mybash_private.sh
