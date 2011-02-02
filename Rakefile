@@ -32,6 +32,7 @@ task :create_symlinks do
     .irbrc           ~/.irbrc
     .pythonrc.py     ~/.pythonrc.py
     .screenrc        ~/.screenrc
+    .tmux.conf       ~/.tmux.conf
     .xmonad          ~/.xmonad
     bin/areac        ~/bin/areac
     bin/clip2browser ~/bin/clip2browser
