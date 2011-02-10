@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Util.Dmenu
 import XMonad.Util.EZConfig
 import XMonad.Util.Run
 
