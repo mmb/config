@@ -4,4 +4,4 @@
 
 # adapted from http://chneukirchen.org/blog/archive/2010/10/two-insanely-useful-command-line-tools.html
 
-firefox `xclip -out`
+google-chrome `xclip -out`
