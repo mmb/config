@@ -1,1 +1,6 @@
 URxvt.font: xft:terminus
+
+URxvt.perl-lib: /home/mmb/config/urxvt-perls
+URxvt.perl-ext-common: default,url-select
+
+URxvt.urlLauncher: google-chrome
