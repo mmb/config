@@ -1,0 +1,6 @@
+\set HISTSIZE 10000
+\set HISTFILE ~/.postgresql_history_ :HOST _ :DBNAME
+
+\set AUTOCOMMIT off
+
+\timing

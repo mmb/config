@@ -30,6 +30,7 @@ task :create_symlinks do
     .gemrc           ~/.gemrc
     .gitconfig       ~/.gitconfig
     .irbrc           ~/.irbrc
+    .psqlrc          ~/.psqlrc
     .pythonrc.py     ~/.pythonrc.py
     .screenrc        ~/.screenrc
     .tmux.conf       ~/.tmux.conf
