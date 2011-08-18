@@ -33,6 +33,7 @@ task :create_symlinks do
     .psqlrc          ~/.psqlrc
     .pythonrc.py     ~/.pythonrc.py
     .screenrc        ~/.screenrc
+    .ssh/config      ~/.ssh/config
     .tmux.conf       ~/.tmux.conf
     .xmonad          ~/.xmonad
     bin/areac        ~/bin/areac
