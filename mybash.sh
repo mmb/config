@@ -1,8 +1,10 @@
+export BROWSER=google-chrome
 export EDITOR=vi
 export HISTIGNORE=" *"
 export RUBYOPT="r rubygems w"
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
+alias bdrop='$BROWSER $HOME/Dropbox'
 alias httphead='wget -O /dev/null -q -S'
 alias update='sudo sh -c "apt-get update ; apt-get upgrade ; gem1.8 update"'
 alias mozrepl='rlwrap telnet localhost 4242'
