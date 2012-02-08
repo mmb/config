@@ -26,16 +26,6 @@ function git_count_unpushed {
   git status 2> /dev/null | sed -n "s/# Your branch is ahead of '.\+' by \([0-9]\+\) commits\?\./\(\\1 unpushed\)/p"
 }
 
-function rvm_prompt_part {
-  RVM_PROMPT=~/.rvm/bin/rvm-prompt
-  if [ -s ${RVM_PROMPT} ]; then
-    VERSION=`${RVM_PROMPT}`
-    if [ -n "${VERSION}" ]; then
-      echo -n " ${VERSION}"
-    fi
-  fi
-}
-
 function set_pagers {
   `which more > /dev/null` &&
     PAGER=more
@@ -91,8 +81,6 @@ PS1="${PS1}\$(jobs | wc -l | sed -n 's/^\([1-9][:digit:]*\)/\[${BRIGHT_PURPLE}\]
 PS1="${PS1}\[${BLUE}\]\w\[${RESET}\]"
 # current git branch
 PS1="${PS1}\$(git branch 2>/dev/null | sed -n 's/^\* \(.*\)/ git:\[${GREEN}\]\1\[${RESET}\]/p')\$(git_count_unpushed)"
-# current rvm ruby version
-PS1="${PS1}\[${RED}\]\$(rvm_prompt_part)"
 PS1="${PS1}\[${RESET}\] \$ "
 
 set_pagers
