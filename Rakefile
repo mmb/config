@@ -32,6 +32,7 @@ task :create_symlinks do
     .irbrc           ~/.irbrc
     .psqlrc          ~/.psqlrc
     .pythonrc.py     ~/.pythonrc.py
+    .rspec           ~/.rspec
     .screenrc        ~/.screenrc
     .ssh/config      ~/.ssh/config
     .tmux.conf       ~/.tmux.conf
