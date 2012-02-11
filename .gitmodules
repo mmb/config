@@ -1,3 +1,6 @@
 [submodule ".emacs.d/vendor/google-maps"]
 	path = .emacs.d/vendor/google-maps
 	url = git://git.naquadah.org/~jd/jd-el.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git
