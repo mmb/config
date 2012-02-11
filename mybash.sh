@@ -10,11 +10,11 @@ alias update='sudo sh -c "apt-get update ; apt-get upgrade ; gem1.8 update"'
 alias mozrepl='rlwrap telnet localhost 4242'
 alias wow='~/.wine/drive_c/Program\ Files/World\ of\ Warcraft/Launcher.exe'
 
-# open rdoc for a ruby core class in Firefox, multiword names are converted to
-# camel case: (e.g. brdoc argument error)
+# open rdoc for a ruby core class in a browser, multiword names are converted
+# to camel case: (e.g. brdoc argument error)
 function brdoc {
   CLASS=`echo "$*" | sed 's/\(^\| \+\)\([a-z]\)/\u\2/g'`
-  firefox http://ruby-doc.org/core/classes/${CLASS}.html
+  $BROWSER http://ruby-doc.org/core/classes/${CLASS}.html
 }
 
 # convert a unix time to a readable time
