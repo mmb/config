@@ -42,6 +42,7 @@ task :create_symlinks do
     bin/clip2google  ~/bin/clip2google
     bin/vim_pager.sh ~/bin/vim_pager.sh
     mybash.sh        ~/mybash.sh
+    myzsh.sh         ~/myzsh.sh
   }].each do |source,dest|
     check_symlink(File.join(Dir.pwd, source), File.expand_path(dest))
   end
