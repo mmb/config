@@ -44,6 +44,8 @@ task :create_symlinks do
     mybash.sh        ~/mybash.sh
     oh-my-zsh        ~/.oh-my-zsh
     zshrc            ~/.zshrc
+
+    mmb.zsh-theme    ~/.oh-my-zsh/themes/mmb.zsh-theme
   }].each do |source,dest|
     check_symlink(File.join(Dir.pwd, source), File.expand_path(dest))
   end
