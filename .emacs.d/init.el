@@ -11,6 +11,7 @@
 
 (setq column-number-mode t)
 
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 (global-set-key "\C-c\C-s" 'sort-lines)
