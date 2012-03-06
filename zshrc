@@ -123,4 +123,7 @@ function x11vnctun {
 
 set_pagers
 
+PATH=$PATH:$HOME/.rvm/bin
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 [[ -f ~/zsh_private.sh ]] && . ~/zsh_private.sh
