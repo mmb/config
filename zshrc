@@ -109,11 +109,6 @@ function sockstun {
   ssh -C -f -D localhost:1080 -N $1
 }
 
-# unescape a url
-function urlun () {
-  python -c "import urllib; print urllib.unquote('''$1''')"
-}
-
 # extract audio from a video file and save in mp3
 function vid2mp3 {
   VIDEO=$1
