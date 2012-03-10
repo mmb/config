@@ -3,5 +3,3 @@
 	email = matthewm@boedicker.org
 [push]
 	default = current
-[core]
-	editor = emacsclient
