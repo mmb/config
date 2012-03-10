@@ -52,10 +52,15 @@ ssh-agent
 )
 
 export BROWSER=google-chrome
-export EDITOR=vi
 export HISTIGNORE=" *"
 export RUBYOPT="r rubygems w"
 export PYTHONSTARTUP=$HOME/.pythonrc.py
+
+if [[ -n $SSH_CLIENT ]]; then
+  export EDITOR=vi
+else
+  export EDITOR=emacsclient
+fi
 
 alias bdrop='$BROWSER $HOME/Dropbox'
 alias httphead='wget -O /dev/null -q -S'
