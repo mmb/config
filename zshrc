@@ -84,6 +84,14 @@ function git_count_unpushed {
   git status 2> /dev/null | sed -n "s/# Your branch is ahead of '.\+' by \([0-9]\+\) commits\?\./\(\\1 unpushed\)/p"
 }
 
+# move all pulse audio sound output to a sink (example: mvsound 0)
+function mvsound {
+  pacmd list-sink-inputs | \
+  grep index | \
+  awk '{print $2}' | \
+  xargs -I sink_input pactl move-sink-input sink_input $1
+}
+
 function set_pagers {
   `which more > /dev/null` &&
     PAGER=more
