@@ -24,6 +24,7 @@
 (require 'xml-pretty)
 (global-set-key "\C-c\C-p" 'xml-pretty)
 
+(load "javascript.el")
 (load "python-mode-add.el")
 (load "ruby")
 (load "theme")
