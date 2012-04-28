@@ -75,6 +75,11 @@ function brdoc {
   $BROWSER http://ruby-doc.org/core/classes/${CLASS}.html
 }
 
+# watch TCP connections
+function conns {
+  watch -d "netstat -nt | awk '/^tcp/ { print \$6 }' | sort | uniq -c"
+}
+
 # convert a unix time to a readable time
 function epoch {
   date -d @$1
