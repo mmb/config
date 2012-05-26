@@ -31,6 +31,8 @@
 (load "ruby")
 (load "theme")
 
+(load "git-commit-mode/git-commit")
+
 (load "google-maps/google-maps")
 
 (load "robmyers-scripts/artbollocks-mode")
