@@ -6,6 +6,8 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
+(savehist-mode 1)
+
 (global-font-lock-mode 1)
 (set-default-font "-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*")
 
