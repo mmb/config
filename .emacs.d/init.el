@@ -33,8 +33,6 @@
 
 (load "git-commit-mode/git-commit")
 
-(load "google-maps/google-maps")
-
 (load "robmyers-scripts/artbollocks-mode")
 (add-hook 'text-mode-hook 'turn-on-artbollocks-mode)
 
