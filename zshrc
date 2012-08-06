@@ -65,6 +65,8 @@ fi
 alias bdrop='$BROWSER $HOME/Dropbox'
 alias httphead='wget -O /dev/null -q -S'
 alias update='sudo sh -c "apt-get update ; apt-get upgrade ; gem1.8 update"'
+# alias for OS X
+alias md5sum=md5
 alias mozrepl='rlwrap telnet localhost 4242'
 alias wow='~/.wine/drive_c/Program\ Files/World\ of\ Warcraft/Launcher.exe'
 
