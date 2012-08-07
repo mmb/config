@@ -44,6 +44,7 @@ task :create_symlinks do
     mybash.sh        ~/mybash.sh
     oh-my-zsh        ~/.oh-my-zsh
     zshrc            ~/.zshrc
+    zshenv           ~/.zshenv
 
     mmb.zsh-theme    ~/.oh-my-zsh/themes/mmb.zsh-theme
   }].each do |source,dest|
