@@ -59,7 +59,11 @@ export PYTHONSTARTUP=$HOME/.pythonrc.py
 if [[ -n $SSH_CLIENT ]]; then
   export EDITOR=vi
 else
-  export EDITOR=emacsclient
+  if [[ $(uname) == Darwin ]]; then
+    export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+  else
+    export EDITOR=emacsclient
+  fi
 fi
 
 alias bdrop='$BROWSER $HOME/Dropbox'
