@@ -148,5 +148,3 @@ function x11vnctun {
 set_pagers
 
 [[ -f ~/zsh_private.sh ]] && . ~/zsh_private.sh
-
-tmux start
