@@ -12,6 +12,7 @@
 (set-default-font "-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*")
 
 (setq column-number-mode t)
+(setq inhibit-splash-screen t)
 
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
