@@ -37,4 +37,7 @@
 (load "robmyers-scripts/artbollocks-mode")
 (add-hook 'text-mode-hook 'turn-on-artbollocks-mode)
 
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
 (server-start)
