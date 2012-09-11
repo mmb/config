@@ -6,8 +6,8 @@
 LESS_MACRO=''
 # places to look for less.vim
 for POSSIBLE in \
-  /usr/share/vim/vim72/macros/less.vim \
-  /usr/share/vim/vim73/macros/less.vim
+  /usr/share/vim/vim73/macros/less.vim \
+  /usr/share/vim/vim72/macros/less.vim
 do
   if [ -e ${POSSIBLE} ]; then
     LESS_MACRO="-u ${POSSIBLE} "
