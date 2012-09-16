@@ -13,6 +13,7 @@
 
 (setq column-number-mode t)
 (setq inhibit-splash-screen t)
+(setq-default show-trailing-whitespace t)
 
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
