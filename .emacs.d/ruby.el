@@ -4,4 +4,5 @@
 		  "capfile\\'"
 		  "config\\.ru\\'"
 		  "Rakefile\\'"
+		  "\\.rake\\'"
 		  )) (add-to-list 'auto-mode-alist (cons pattern 'ruby-mode)))
