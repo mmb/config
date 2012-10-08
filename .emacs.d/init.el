@@ -33,6 +33,7 @@
 (load "ruby")
 (load "theme")
 
+(load "coffee-mode/coffee-mode")
 (load "git-commit-mode/git-commit")
 
 (load "robmyers-scripts/artbollocks-mode")
