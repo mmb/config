@@ -3,6 +3,8 @@
 		  "Capfile\\'"
 		  "capfile\\'"
 		  "config\\.ru\\'"
+		  "Gemfile\\'"
+		  "\\.gemspec\\'"
 		  "Rakefile\\'"
 		  "\\.rake\\'"
 		  )) (add-to-list 'auto-mode-alist (cons pattern 'ruby-mode)))
