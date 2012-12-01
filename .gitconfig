@@ -3,3 +3,5 @@
 	email = matthewm@boedicker.org
 [push]
 	default = current
+[core]
+	excludesfile = ~/.gitignore_global

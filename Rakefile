@@ -29,6 +29,7 @@ task :create_symlinks do
     .emacs.d         ~/.emacs.d
     .gemrc           ~/.gemrc
     .gitconfig       ~/.gitconfig
+    .gitignore_global ~/.gitignore_global
     .irbrc           ~/.irbrc
     .psqlrc          ~/.psqlrc
     .pythonrc.py     ~/.pythonrc.py
