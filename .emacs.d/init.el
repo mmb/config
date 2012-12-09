@@ -3,7 +3,8 @@
 (add-to-load-path-and-next-level "~/.emacs.d/vendor")
 
 ; turn off tool bar and menu bar
-(tool-bar-mode -1)
+(if (display-graphic-p)
+    (tool-bar-mode -1))
 (menu-bar-mode -1)
 
 (savehist-mode 1)
