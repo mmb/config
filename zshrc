@@ -67,7 +67,6 @@ else
 fi
 
 alias bdrop='$BROWSER $HOME/Dropbox'
-alias git=hub
 alias httphead='wget -O /dev/null -q -S'
 alias update='sudo sh -c "apt-get update ; apt-get upgrade ; gem1.8 update"'
 # alias for OS X
@@ -149,3 +148,5 @@ function x11vnctun {
 set_pagers
 
 [[ -f ~/zsh_private.sh ]] && . ~/zsh_private.sh
+
+eval "$(hub alias -s)"
