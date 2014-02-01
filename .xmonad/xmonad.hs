@@ -1,14 +1,15 @@
 import XMonad
-import XMonad.Util.Dmenu
-import XMonad.Util.EZConfig
-import XMonad.Util.Run
+import XMonad.Hooks.DynamicLog
 
-main = do
-  xmonad $ defaultConfig {
-    modMask = mod4Mask,
-    terminal = "urxvt"
-  } `additionalKeysP` [
-      ("M-u", safeSpawnProg "clip2browser"),
-      ("M-g", safeSpawnProg "clip2google"),
-      ("M-x", safeSpawnProg "xlock")
-    ]
+main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
+
+myBar = "i3status | xmobar -b -t '%StdinReader%' -c '[Run StdinReader]'"
+
+myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
+
+toggleStrutsKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
+
+myConfig = defaultConfig {
+  modMask = mod4Mask,
+  terminal = "urxvt"
+}
